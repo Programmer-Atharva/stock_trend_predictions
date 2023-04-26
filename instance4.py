@@ -19,7 +19,7 @@ end_date_input = st.text_input("Enter end date (year-month-day)", '2019-12-31')
 end = datetime.strptime(end_date_input, '%Y-%m-%d')
 
 #Describing Data
-st.subheader('data for apple')
+st.subheader('data for following ticker : ')
 user_input = st.text_input("Enter ticker for stock", "AAPL")
 df = pdr.get_data_yahoo(user_input, start,end)
 st.write(df.describe())
